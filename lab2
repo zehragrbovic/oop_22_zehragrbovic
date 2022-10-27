@@ -1,0 +1,179 @@
+/*
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+     
+    int err = 1;
+   
+    while (err == 1) {
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Enter password: ");
+
+        String userPassword = myObj.nextLine();
+       
+        if(userPassword.equals("1234")) {
+            err = 0;
+            System.out.println("Correct ");
+            break;
+        }
+        System.out.println("Wrong password.");
+    }
+   
+  }
+}*/
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+       
+        int counter = 3;
+        int s = 0;
+        int num;
+        while (counter > 0) {
+            Scanner myObj = new Scanner(System.in);
+            System.out.println("Enter number: ");
+
+            num = myObj.nextInt();
+            s += num;
+            counter -= 1;
+        }
+       
+        System.out.println("Sum of those numbers: " + s);
+    }
+}
+*/
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+       
+        int s = 0;
+        int num = 1;
+        while (num > 0) {
+            Scanner myObj = new Scanner(System.in);
+            System.out.println("Enter number: ");
+
+            num = myObj.nextInt();
+            s += num;
+           
+            if (num > 0) {
+                System.out.println("Current sum: " + s);
+            }
+        }
+       
+        System.out.println("Sum in the end: " + s);
+    }
+}
+*/
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+       
+        int num1, num2;
+       
+        Scanner myObj = new Scanner(System.in);
+       
+        System.out.println("Enter first number: ");
+        num1 = myObj.nextInt();
+           
+        System.out.println("Enter second number: ");
+        num2 = myObj.nextInt();
+       
+        while (num1 <= num2) {
+           
+            System.out.println(num1);
+            num1 += 1;
+           
+        }
+    }
+}
+*/
+
+/*import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+       
+        int num;
+        int s = 0;
+       
+        Scanner myObj = new Scanner(System.in);
+       
+        System.out.println("Enter number: ");
+        num = myObj.nextInt();
+       
+        while (num >= 0) {
+           
+            s += (int)Math.pow(2, num);
+            num -= 1;
+           
+        }
+       
+        System.out.println(s);
+    }
+}
+*/
+
+/*
+public class Main {
+  static void myMethod() {
+    System.out.println("In the beginning there were the swamp, the hoe and Java.\n");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+*/
+
+/*
+public class Main {
+   
+    public static void main(String[] args) {
+        printStars(5);
+    }
+   
+    static void printStars(int num) {
+        while (num > 0) {
+            System.out.print("*\n");
+            num -= 1;
+        }
+    }
+}
+*/
+
+import java.lang.Math;  
+import java.util.Scanner;
+
+public class Main {    
+    public static void main(String args[]) {
+       
+        int randNum = (int)Math.random();
+        int num = randNum + 1;
+        int guesses = 0;
+       
+        Scanner myObj = new Scanner(System.in);
+        while (num != randNum) {
+           
+            System.out.println("Enter number: ");
+            num = myObj.nextInt();
+            guesses += 1;
+           
+            if(num < randNum) {
+                System.out.println("Number is greater. ");
+            }
+            else {
+                System.out.println("Number is lesser. ");
+            }
+        }
+        System.out.println("Number is correct.");
+    }  
+}
