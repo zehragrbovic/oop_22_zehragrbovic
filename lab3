@@ -1,0 +1,222 @@
+/*
+class task1 {
+   
+    public static double average(int number1, int number2, int number3, int number4) {
+       
+        double result = sum(number1, number2, number3, number4);
+        result /= 4;
+        return result;
+       
+    }
+   
+    public static double sum(int number1, int number2, int number3, int number4) {
+       
+        double summed = number1 + number2 + number3 + number4;
+        return summed;
+    }
+   
+    public static void main(String[] args) {
+        double answer = average(4, 3, 6, 1);
+        System.out.println("average: " + answer);
+    }
+}
+*/
+
+/*
+import java.util.Scanner;
+
+class task2 {
+   
+    public static void main(String[] args) {
+       
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Input your name");
+        String name = reader.nextLine();
+       
+        System.out.println(name.length());
+    }
+   
+}
+*/
+
+/*
+import java.util.Scanner;
+class task3 {
+   
+    public static void main(String[] args) {
+       
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Input your name");
+        String name = reader.nextLine();
+       
+        int l = name.length(), i = 0;
+        while(i < l) {
+            System.out.println(name.charAt(i));
+            i++;
+        }
+    }
+   
+}
+*/
+
+/*
+import java.util.Scanner;
+class task4 {
+   
+    public static void main(String[] args) {
+       
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Input your name");
+        String name = reader.nextLine();
+       
+        int l = name.length();
+        while(l > 0) {
+            l--;
+            System.out.println(name.charAt(l));
+        }
+    }
+   
+}
+*/
+
+/*
+import java.util.Scanner;
+class task5Attempt {
+   
+    public static void main(String[] args) {
+       
+        Scanner reader = new Scanner(System.in);
+        String word1 = reader.nextLine();
+        String word2 = reader.nextLine();
+       
+        int l1 = word1.length(), l2 = word2.length();
+        int counter;
+       
+        for(int i = 0; i < l1 - l2; i++) {
+            counter = 0;
+            for(int j = 0; j < l2; j++) {
+                if(counter == l2) {
+                        System.out.println(word1.charAt(i));
+                        i = l1 + 1;
+                        break;
+                    }
+                if(word1.charAt(i+j) == word2.charAt(j)) {
+                    counter++;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+    }
+   
+}
+*/
+
+/*
+import java.util.Scanner;
+class task5 {
+   
+    public static void main(String[] args) {
+       
+        Scanner reader = new Scanner(System.in);
+        String word1 = reader.nextLine();
+        String word2 = reader.nextLine();
+        int result = word1.indexOf(word2);
+        if(result != -1) {
+            System.out.println(result);
+        }
+       
+    }
+   
+}
+*/
+
+/*
+import java.util.Scanner;
+import java.util.ArrayList;
+class task6 {
+   
+    public static void main(String[] args) {
+       
+        Scanner reader = new Scanner(System.in);
+        ArrayList<String> words = new ArrayList<String>();
+        String word;
+       
+        while(true) {
+            System.out.print("Type a word: ");
+            word = reader.nextLine();
+           
+            if(words.contains(word)) {break;}
+            words.add(word);
+        }
+       
+        System.out.println("You gave the word " + word + " twice");
+    }
+   
+}
+*/
+
+/*
+import java.util.Scanner;
+import java.util.ArrayList;
+class task7 {
+   
+   public static ArrayList<Integer> lengths(ArrayList<String> list) {
+       
+       
+       ArrayList<Integer> ls = new ArrayList<Integer>();
+       
+       for(int i = 0; i < 4; i++) {
+           ls.add((list.get(i)).length());
+       }
+       return ls;
+       
+   }
+   
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Hello");
+        list.add("Moi");
+        list.add("Benvenuto!");
+        list.add("badger badger badger badger");
+        ArrayList<Integer> lengths = lengths(list);
+       
+        System.out.println("The lengths of the Strings: " + lengths);
+    }
+   
+}
+*/
+
+/*
+import java.util.ArrayList;
+import java.util.Scanner;
+class task8 {
+   
+   public static Boolean palindrome(String word) {
+       
+       for(int i = 0; i < word.length()/2; i++) {
+           if(word.charAt(i) != (word.charAt(word.length()-i-1))) {
+               return false;
+           }
+       }
+       
+       return true;
+   }
+   
+    public static void main(String[] args) {
+        
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type a text: ");
+        String word = reader.nextLine();
+        
+        if(palindrome(word)) {
+            System.out.println("The text is a palindrome!");    
+        }
+        else {
+            System.out.println("The text is not a palindrome!");
+        }
+        
+    }
+   */
+}
